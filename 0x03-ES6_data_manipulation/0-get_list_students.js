@@ -1,5 +1,5 @@
 export default function getListStudents() {
-    objects_arr = [
+    const objects_arr = [
         {
             id: 1,
             firstName: "Guillaume",
@@ -11,7 +11,7 @@ export default function getListStudents() {
             location: "Columbia"
         },
         {
-            id: 3,
+            id: 5,
             firstName: "Serana",
             location: "San Francisco"
         }
