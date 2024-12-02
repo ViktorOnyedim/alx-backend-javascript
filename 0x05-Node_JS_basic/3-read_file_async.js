@@ -36,11 +36,21 @@ const countStudents = (path) => {
       console.log(`Number of students: ${studentsData.length}`);
       for (const [field, names] of Object.entries(fields)) {
         console.log(
-            `Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`
+          `Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`
         );
       }
       resolve();
-    });
+    });const countStudents = require('./3-read_file_async');
+
+    countStudents("database.csv")
+        .then(() => {
+            console.log("Done!");
+        })
+            .catch((error) => {
+            console.log(error);
+        });
+    console.log("After!");
+    
   });
 };
 
