@@ -27,14 +27,14 @@ function countStudents(path) {
           };
         }
 
-        fieldCounts[field].count++;
+        fieldCounts[field].count += 1;
         fieldCounts[field].students.push(firstName);
         // console.log(`Columns: ${columns}, field: ${field}, firstName: ${firstName}`);
       }
     }
     const totalStudents = Object.values(fieldCounts).reduce(
       (acc, field) => acc + field.count,
-      0
+      0,
     );
     console.log(`Number of students: ${totalStudents}`);
 
